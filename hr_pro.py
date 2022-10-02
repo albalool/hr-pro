@@ -23,6 +23,8 @@ class Manager(Employee):
         return f"Name: {self.name}, Age: {self.age}, Salary: {self.salary}, Working Years: {self.employment_years}, Bounus: {self.bonus_percentage}"
 
 
+
+
 def main():
         employee_one = Employee("Lateefa", 33, 1500, 10)
         employee_two = Employee("Mohammad", 32, 1800, 8)
@@ -31,42 +33,58 @@ def main():
         manager_two = Manager("Shereen", 35, 1900, 12, 2)
         managers_list = [manager_one, manager_two]
 
+        print(employee_one)
+        print(employee_two)
+        print(manager_one)
+        print(manager_two)
+        print(employee_list)
+        print(managers_list)
 
-        list_of_options = ["Show Employees", "Show Managers", "Add An Employee", "Add A Manager", "Exit"]
         
-        def show_option(list_of_options):
+        def show_options():
+            list_of_options = ["Show Employees", "Show Managers", "Add An Employee", "Add A Manager", "Exit"]
             print("Welcome to HR Prop")
-            print("Your option:")
+            print("Your options:")
             for index, option in enumerate(list_of_options, 1):
                 print(f"{index}. {option}")
                 
-        def get_options(list_of_options):
+        def get_options():
             toDo = int(input("What would you like to do? "))
             if toDo == 1:
                 print(employee_list)
             elif toDo == 2:
                 print(managers_list)
             elif toDo == 3:
-                print("Add employee details")
-                name = print(input("Name:" ))
-                age = print(int(input("age:" )))
-                salary = print(int(input("Salary:" )))
-                Employement_years = print(int(input("Employement years:" )))
-                print("Employee added succesfully")
-                employee_three = Employee(name,age,salary,Employement_years)
-                print(employee_list.append[employee_three])
+                for employee in employee_list:
+                   print("Add employee details")
+                   name = input("Name: " )
+                   age = int(input("age: " ))
+                   salary = int(input("Salary: " ))
+                   employment_years = int(input("Employement years: " ))
+                   print("Employee added succesfully")
+                   employee = Employee(name, age, salary, employment_years)
+                   employee_list.append[employee]
+                   print(f"Name: {name}, Age: {age}, Salary: {salary}, Working Years: {employment_years}")
+                 #  print(employee)
             elif toDo == 4:
-                print("Add Manager details")
-                name = print(input("Name: "))
-                age = print(int(input("age: ")))
-                salary = print(int(input("Salary: ")))
-                Employement_years = print(int(input("Employement years: ")))
-                Bonus = print(float(input("Bonus Percentage: ")))
-                print("Manager added succesfully")
-                manager_three = Manager(name,age,salary,Employement_years, Bonus)
-                print(managers_list.append[manager_three])
-            elif toDo == 5:
-                return False 
+                for manager in managers_list:
+                   print("Add Manager details")
+                   name = print(input("Name: "))
+                   age = print(int(input("age: ")))
+                   salary = print(int(input("Salary: ")))
+                   employment_years = print(int(input("Employement years: ")))
+                   Bonus = print(float(input("Bonus Percentage: ")))
+                   print("Manager added succesfully")
+                   manager = Manager(name,age,salary,employment_years, Bonus)
+                   managers_list.append[manager]
+                   print(f"Name: {name}, Age: {age}, Salary: {salary}, Working Years: {employment_years}, Bounus: {Bonus}")
+                 #  print(manager)
+
+
+        # print(show_options())
+        # print(get_options())
+
+
 
 
 if __name__ == '__main__':
