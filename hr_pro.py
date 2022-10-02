@@ -17,7 +17,7 @@ class Manager(Employee):
         self.bonus_percentage = bonus_percentage
 
     def __str__(self):
-        return f"Name: {Employee.name}, Age: {Employee.age}, Salary: {Employee.salary}, Working Years: {Employee.employment_years}, Bounus: {self.bonus_percentage}"
+        return f"Name: {self.name}, Age: {self.age}, Salary: {self.salary}, Working Years: {self.employment_years}, Bounus: {self.bonus_percentage}"
 
     
 #     def main():
