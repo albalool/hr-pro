@@ -33,12 +33,12 @@ def main():
         manager_two = Manager("Shereen", 35, 1900, 12, 2)
         managers_list = [manager_one, manager_two]
 
-        print(employee_one)
-        print(employee_two)
-        print(manager_one)
-        print(manager_two)
-        print(employee_list)
-        print(managers_list)
+        # print(employee_one)
+        # print(employee_two)
+        # print(manager_one)
+        # print(manager_two)
+        # print(employee_list)
+        # print(managers_list)
 
         
         def show_options():
@@ -49,6 +49,8 @@ def main():
                 print(f"{index}. {option}")
                 
         def get_options():
+            employee_list = [employee_one, employee_two]
+            managers_list = [manager_one, manager_two]
             toDo = int(input("What would you like to do? "))
             if toDo == 1:
                 print(employee_list)
@@ -63,7 +65,7 @@ def main():
                    employment_years = int(input("Employement years: " ))
                    print("Employee added succesfully")
                    employee = Employee(name, age, salary, employment_years)
-                   employee_list.append[employee]
+                   employee_list.append(employee)
                    print(f"Name: {name}, Age: {age}, Salary: {salary}, Working Years: {employment_years}")
                  #  print(employee)
             elif toDo == 4:
@@ -76,15 +78,13 @@ def main():
                    Bonus = print(float(input("Bonus Percentage: ")))
                    print("Manager added succesfully")
                    manager = Manager(name,age,salary,employment_years, Bonus)
-                   managers_list.append[manager]
+                   managers_list.append(manager)
                    print(f"Name: {name}, Age: {age}, Salary: {salary}, Working Years: {employment_years}, Bounus: {Bonus}")
                  #  print(manager)
 
 
-        # print(show_options())
-        # print(get_options())
-
-
+        print(show_options())
+        print(get_options())
 
 
 if __name__ == '__main__':
