@@ -16,6 +16,9 @@ class Manager(Employee):
         super().__init__(name, age, salary, employment_years)
         self.bonus_percentage = bonus_percentage
 
+    def get_bonus(self, bonus_percentage):
+        return bonus_percentage * self.salary
+
     def __str__(self):
         return f"Name: {self.name}, Age: {self.age}, Salary: {self.salary}, Working Years: {self.employment_years}, Bounus: {self.bonus_percentage}"
 
